@@ -6,6 +6,8 @@ import { fetchForecast, fetchSummary } from "./api/weather";
 import ForecastTable from "./components/ForecastTable";
 import WeekSummary   from "./components/WeekSummary";
 import MapPicker from "./components/MapPicker";
+const DEFAULT_LAT = 52.2297; // Warszawa
+const DEFAULT_LON = 21.0122;
 
 export default function Home() {
   const geo = useGeolocation();
@@ -21,6 +23,9 @@ export default function Home() {
     if (geo.lat && geo.lon) {
       setLat(geo.lat);
       setLon(geo.lon);
+    }else if(geo.error){
+      setLat(DEFAULT_LAT);
+      setLon(DEFAULT_LON);
     }
   }, [geo.lat, geo.lon]);
 

@@ -9,7 +9,7 @@ Displays a 7-day weather forecast and estimated solar energy production for any 
 - 7-day weather forecast (date, icon, min/max temp, solar energy)
 - Weekly summary (min/max temp, avg pressure, avg sunshine, comment)
 - Interactive map (Leaflet) to pick any location
-- Responsive, dark mode, clean UI (Tailwind CSS)
+- Responsive, clean UI (Tailwind CSS)
 - Integration with external backend API
 
 ## Getting Started
